@@ -1,0 +1,16 @@
+spring:
+ datasource:
+  url: jdbc:postgresql://localhost:5432/postgres?useSSL=false
+  username: postgres
+  password: 123456
+  driverClassName: org.postgresql.Driver
+ jpa:
+  properties:
+   hibernate:
+    dialect: org.hibernate.dialect.PostgreSQLDialect
+    hbm2ddl:
+     auto: update
+
+mybatis:
+ mapper-locations: classpath:mapping/*Mapper.xml
+ type-aliases-package: com.example.springbpgsql.entity
